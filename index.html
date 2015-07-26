@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Graphics Standards Manual</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        function formatNumber(n) {
+            if (n < 10) {
+                return '00' + n;
+            } else if (n < 100) {
+                return '0' + n;
+            } else {
+                return n;
+            }
+        }
+
+        var pages = 181;
+        var img;
+        var i;
+
+        for (i = 0; i <= pages; i += 1) {
+            img = document.createElement('img');
+            img.setAttribute('src', 'http://thestandardsmanual.com/images/large/nycta_gsm_' + formatNumber(i) + '.jpg');
+            document.body.appendChild(img);
+        }
+
+    </script>
+</body>
+</html>
